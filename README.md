@@ -1,4 +1,4 @@
-# WMG9B7-15: Artificial Intelligence &amp; Deep Learning Module
+# WM9B7-15: Artificial Intelligence &amp; Deep Learning Module
 WMG MSc Applied Artificial Intelligence - Artificial Intelligence &amp; Deep Learning Module
 
 ## Hands-On Tutorials Repository
