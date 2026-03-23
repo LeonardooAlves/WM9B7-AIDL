@@ -85,7 +85,7 @@ These tutorials directly support your module assessments:
 
 | Assessment | Weight | Support Areas |
 |------------|--------|---------------|
-| **Group Presentation** | 30% | Weeks 1-2  |
+| **Group Presentation** | 30% | Weeks 1-3  |
 | **Individual Project** | 70% | All weeks  |
 
 The hands-on skills developed here will enable you to:
