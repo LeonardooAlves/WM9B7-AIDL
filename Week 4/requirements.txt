@@ -1,0 +1,8 @@
+# LLM APIs
+openai                    # Groq API client
+google-cloud-aiplatform   # GCP Vertex AI
+
+# Configuration
+python-dotenv             # Environment variable loading
+pyyaml                    # YAML config file parsing
+munch                     # Object-style config access
