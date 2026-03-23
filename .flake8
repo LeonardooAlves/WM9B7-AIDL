@@ -1,0 +1,7 @@
+[flake8]
+
+# Modifications for using the black formatter
+# Without these the black formatter clashes with flake8
+
+max-line-length = 88
+extend-ignore = E203, E402
