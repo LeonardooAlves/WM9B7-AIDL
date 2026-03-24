@@ -6,3 +6,7 @@ google-cloud-aiplatform   # GCP Vertex AI
 python-dotenv             # Environment variable loading
 pyyaml                    # YAML config file parsing
 munch                     # Object-style config access
+
+# BGE-M3 Embeddings
+FlagEmbedding             # BGE-M3 model
+scikit-learn              # For cosine_similarity
