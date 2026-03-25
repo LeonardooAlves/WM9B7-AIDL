@@ -1,13 +1,13 @@
-# GCP
-gcp:
-  region: europe-west2
-  project_name: wmg-ai-2026
-  llm: gemini-1.5-flash-002
-  service_account_json_path: "Week 4/resources/gcp_sa.json"
-
 # Groq
 groq:
   model: llama-3.1-8b-instant
   temperature: 0.7
   max_tokens: 100
   base_url: "https://api.groq.com/openai/v1"
+
+# Supabase
+supabase:
+  host: db.ewcugkjfmcxnwafzhqdf.supabase.co
+  port: 5432
+  database: postgres
+  user: postgres
