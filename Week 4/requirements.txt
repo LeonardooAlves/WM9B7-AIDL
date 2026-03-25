@@ -10,3 +10,6 @@ munch                     # Object-style config access
 # BGE-M3 Embeddings
 FlagEmbedding             # BGE-M3 model
 scikit-learn              # For cosine_similarity
+
+# Database
+psycopg2-binary           # PostgreSQL adapter
