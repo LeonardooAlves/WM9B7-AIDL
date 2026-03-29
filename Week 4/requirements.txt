@@ -1,6 +1,5 @@
 # LLM APIs
 openai                    # Groq API client
-google-cloud-aiplatform   # GCP Vertex AI
 
 # Configuration
 python-dotenv             # Environment variable loading
@@ -13,3 +12,10 @@ scikit-learn              # For cosine_similarity
 
 # Database
 psycopg2-binary           # PostgreSQL adapter
+
+
+langchain
+langchain-groq
+langchain-core
+langchain-text-splitters
+tiktoken
