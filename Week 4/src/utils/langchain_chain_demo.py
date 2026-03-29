@@ -5,7 +5,6 @@ from munch import Munch
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from langchain_core.runnables import RunnablePassthrough
 
 # 📂 Load config
 config_path = Path(__file__).parents[2] / "config" / "config.yaml"
@@ -36,12 +35,9 @@ tone_prompt = ChatPromptTemplate.from_messages(
             "system",
             "You are a writing style expert. Rewrite the given text in a {tone} tone. "
             "Maintain the original meaning but adjust the formality, vocabulary, and style. "
-            "Output ONLY the rewritten text, no explanations."
+            "Output ONLY the rewritten text, no explanations.",
         ),
-        (
-            "user",
-            "{text}"
-        ),
+        ("user", "{text}"),
     ]
 )
 
@@ -52,12 +48,9 @@ translation_prompt = ChatPromptTemplate.from_messages(
             "system",
             "You are a professional translator. Translate the following text from "
             "{input_language} to {output_language}. Preserve the tone and style. "
-            "Output ONLY the translation."
+            "Output ONLY the translation.",
         ),
-        (
-            "user",
-            "{adjusted_text}"
-        ),
+        ("user", "{adjusted_text}"),
     ]
 )
 
