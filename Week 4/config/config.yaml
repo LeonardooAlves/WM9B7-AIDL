@@ -11,3 +11,13 @@ supabase:
   port: 5432
   database: postgres
   user: postgres
+
+# Text Chunking
+chunking:
+  book_file: "Alice's Adventures in Wonderland by Lewis Carroll.txt"
+  recursive_chunk_size: 1000
+  recursive_chunk_overlap: 200
+  character_chunk_size: 800
+  character_chunk_overlap: 100
+  token_chunk_size: 400
+  token_chunk_overlap: 50
