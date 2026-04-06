@@ -6,6 +6,13 @@ Demonstrates dense, sparse (lexical), and ColBERT (multi-vector) embeddings.
 import numpy as np
 from FlagEmbedding import BGEM3FlagModel
 from sklearn.metrics.pairwise import cosine_similarity
+from pathlib import Path
+from munch import Munch
+
+# 📂 Load config
+config_path = Path(__file__).parents[2] / "config" / "config.yaml"
+with open(config_path, "r") as f:
+    config = Munch.fromYAML(f)
 
 
 def demo_bge_m3_embeddings():
@@ -19,15 +26,15 @@ def demo_bge_m3_embeddings():
     ]
 
     # Initialize BGE-M3 model
-    print("Loading BAAI/bge-m3 model...")
-    model = BGEM3FlagModel("BAAI/bge-m3", use_fp16=True)
+    print(f"Loading {config.embedding.model} model...")
+    model = BGEM3FlagModel(config.embedding.model, use_fp16=True)
 
     # Get all three types of embeddings
     print("\nGenerating embeddings...")
     embeddings = model.encode(
         documents,
-        batch_size=8,
-        max_length=512,
+        batch_size=config.embedding.batch_size,
+        max_length=config.embedding.max_length,
         return_dense=True,
         return_sparse=True,
         return_colbert_vecs=True,
@@ -50,7 +57,7 @@ def demo_bge_m3_embeddings():
     query_embeddings = model.encode(
         [query],
         batch_size=1,
-        max_length=512,
+        max_length=config.embedding.max_length,
         return_dense=True,
         return_sparse=True,
         return_colbert_vecs=True,
