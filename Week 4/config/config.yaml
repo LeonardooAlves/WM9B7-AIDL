@@ -15,9 +15,20 @@ supabase:
 # Text Chunking
 chunking:
   book_file: "Alice's Adventures in Wonderland by Lewis Carroll.txt"
-  recursive_chunk_size: 1000
-  recursive_chunk_overlap: 200
-  character_chunk_size: 800
-  character_chunk_overlap: 100
-  token_chunk_size: 400
-  token_chunk_overlap: 50
+  fixed_size:
+    chunk_size: 1000
+    overlap: 200
+  sentence:
+    max_sentences: 8
+    overlap_sentences: 2
+  paragraph:
+    min_chars: 80
+  token:
+    chunk_size: 400
+    overlap: 50
+
+# Embedding
+embedding:
+  model: "BAAI/bge-m3"
+  batch_size: 16
+  max_length: 512
