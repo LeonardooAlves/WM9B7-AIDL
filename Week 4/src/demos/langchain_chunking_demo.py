@@ -53,8 +53,8 @@ def demo_chunking_strategies():
     # 🔄 Strategy 1: Recursive Character Splitter (recommended)
     print("\n1️⃣  Recursive Character Text Splitter")
     recursive_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=config.chunking.recursive_chunk_size,
-        chunk_overlap=config.chunking.recursive_chunk_overlap,
+        chunk_size=config.chunking.fixed_size.chunk_size,
+        chunk_overlap=config.chunking.fixed_size.overlap,
         length_function=len,
         is_separator_regex=False,
     )
@@ -72,8 +72,8 @@ def demo_chunking_strategies():
     # 📄 Strategy 2: Character Text Splitter (simple)
     print("\n2️⃣  Character Text Splitter")
     char_splitter = CharacterTextSplitter(
-        chunk_size=config.chunking.character_chunk_size,
-        chunk_overlap=config.chunking.character_chunk_overlap,
+        chunk_size=config.chunking.fixed_size.chunk_size,
+        chunk_overlap=config.chunking.fixed_size.overlap,
         separator="\n\n",
         length_function=len,
     )
@@ -90,8 +90,8 @@ def demo_chunking_strategies():
     # 🔤 Strategy 3: Token Text Splitter (token-aware)
     print("\n3️⃣  Token Text Splitter")
     token_splitter = TokenTextSplitter(
-        chunk_size=config.chunking.token_chunk_size,
-        chunk_overlap=config.chunking.token_chunk_overlap,
+        chunk_size=config.chunking.token.chunk_size,
+        chunk_overlap=config.chunking.token.overlap,
     )
     token_chunks = token_splitter.split_text(text)
     token_docs = create_documents_with_metadata(token_chunks, "token")
