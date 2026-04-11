@@ -15,10 +15,9 @@ supabase:
 # Text Chunking
 chunking:
   book_file: "Alice's Adventures in Wonderland by Lewis Carroll.txt"
-  # book_file: "Moby Dick; Or, The Whale by Herman Melville.txt"
   # book_file: "Pride and Prejudice by Jane Austen.txt"
   # book_file: "Romeo and Juliet by William Shakespeare.txt"
-  # book_file: "The Count of Monte Cristo by Alexandre Dumas and Auguste Maquet.txt"
+  # book_file: "Frankenstein; or, the modern prometheus by Mary Wollstonecraft Shelley.txt"
   fixed_size:
     chunk_size: 1000
     overlap: 200
