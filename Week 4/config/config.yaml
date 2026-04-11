@@ -35,6 +35,7 @@ embedding:
   model: "BAAI/bge-m3"
   batch_size: 16
   max_length: 512
+  num_chunks_embed: 400
 
 # Retrieval
 retrieval:
