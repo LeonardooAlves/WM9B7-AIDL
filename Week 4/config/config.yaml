@@ -22,7 +22,7 @@ chunking:
     chunk_size: 1000
     overlap: 200
   sentence:
-    max_sentences: 8
+    max_sentences: 10
     overlap_sentences: 2
   paragraph:
     min_chars: 80
@@ -35,8 +35,22 @@ embedding:
   model: "BAAI/bge-m3"
   batch_size: 16
   max_length: 512
-  num_chunks_embed: 400
+  num_chunks_embed: 75
 
 # Retrieval
 retrieval:
   top_k: 5
+
+
+# Re-ranking
+reranker:
+  model: "BAAI/bge-reranker-base"
+  # How many candidates to retrieve before re-ranking (multiplied by top_k)
+  candidate_factor: 3
+ 
+# Benchmarking
+benchmarking:
+  # Number of questions sampled per test set — keep small to limit LLM calls
+  sample_size: 10
+  random_seed: 42
+  retrieval_threshold: 0.15   # Min ROUGE-L for a chunk to count as a hit
