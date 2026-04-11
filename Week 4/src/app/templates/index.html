@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAG — {{ book_name }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+
+    <div class="noise"></div>
+
+    <aside class="sidebar">
+        <div class="sidebar__logo">
+            <span class="sidebar__logo-icon">◈</span>
+            <span class="sidebar__logo-text">RAG</span>
+        </div>
+
+        <div class="sidebar__book">
+            <p class="sidebar__label">Knowledge base</p>
+            <p class="sidebar__book-title">{{ book_name }}</p>
+        </div>
+
+        <div class="sidebar__pipeline">
+            <p class="sidebar__label">Retrieval pipeline</p>
+            <ul class="pipeline">
+                <li class="pipeline__step">
+                    <span class="pipeline__dot pipeline__dot--dense"></span>
+                    Dense
+                </li>
+                <li class="pipeline__step">
+                    <span class="pipeline__dot pipeline__dot--sparse"></span>
+                    Sparse
+                </li>
+                <li class="pipeline__step">
+                    <span class="pipeline__dot pipeline__dot--colbert"></span>
+                    ColBERT
+                </li>
+                <li class="pipeline__step pipeline__step--fuse">
+                    <span class="pipeline__dot pipeline__dot--rrf"></span>
+                    RRF Fusion
+                </li>
+            </ul>
+        </div>
+
+        <div class="sidebar__model">
+            <p class="sidebar__label">LLM</p>
+            <p class="sidebar__model-name">LLaMA 3.1 · Groq</p>
+        </div>
+    </aside>
+
+    <main class="main">
+        <header class="header">
+            <h1 class="header__title">Ask the book</h1>
+            <p class="header__subtitle">Ensemble retrieval · Grounded answers</p>
+        </header>
+
+        <section class="chat" id="chat" aria-live="polite" aria-label="Conversation">
+            <div class="chat__empty" id="chat-empty">
+                <span class="chat__empty-icon">✦</span>
+                <p>Ask anything about the book.</p>
+            </div>
+        </section>
+
+        <form class="input-area" id="form" autocomplete="off">
+            <textarea
+                class="input-area__textarea"
+                id="question"
+                name="question"
+                placeholder="Type your question…"
+                rows="1"
+                aria-label="Your question"
+            ></textarea>
+            <button class="input-area__btn" id="submit-btn" type="submit" aria-label="Send">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </form>
+    </main>
+
+    <script src="/static/js/chat.js"></script>
+</body>
+</html>
