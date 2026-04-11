@@ -14,10 +14,10 @@ supabase:
 
 # Text Chunking
 chunking:
-  book_file: "Alice's Adventures in Wonderland by Lewis Carroll.txt"
-  # book_file: "Pride and Prejudice by Jane Austen.txt"
-  # book_file: "Romeo and Juliet by William Shakespeare.txt"
-  # book_file: "Frankenstein; or, the modern prometheus by Mary Wollstonecraft Shelley.txt"
+  book_file: "books/Alice's Adventures in Wonderland by Lewis Carroll.txt"
+  # book_file: "books/Pride and Prejudice by Jane Austen.txt"
+  # book_file: "books/Romeo and Juliet by William Shakespeare.txt"
+  # book_file: "books/Frankenstein; or, the modern prometheus by Mary Wollstonecraft Shelley.txt"
   fixed_size:
     chunk_size: 1000
     overlap: 200
