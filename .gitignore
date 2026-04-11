@@ -35,6 +35,9 @@ Thumbs.db
 # Jupyter Notebook
 .ipynb_checkpoints
 
+# Output
+Week 4/assets/benchmark_results
+
 # Google Cloud credentials
 *.json
 !requirements.txt
