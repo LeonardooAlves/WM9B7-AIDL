@@ -1,4 +1,3 @@
-import os
 import json
 
 import numpy as np
@@ -93,3 +92,55 @@ def retrieve_colbert(
         for cid, d in chunk_scores.items()
     ]
     return sorted(results, key=lambda x: x["score"], reverse=True)[:top_k]
+
+
+def retrieve_unified(
+    database_url: str,
+    sql_dir: Path,
+    q_dense: np.ndarray,
+    q_sparse: dict,
+    q_colbert: np.ndarray,
+    top_k: int,
+) -> tuple[list[dict], list[dict], list[dict]]:
+    """
+    Single SQL query that retrieves from all three methods at once.
+    Returns tuple of (dense_results, sparse_results, colbert_results).
+    """
+    sql = (sql_dir / "12_query_unified.sql").read_text()
+    
+    # Prepare parameters
+    dense_vec_str = f"[{','.join(map(str, q_dense.tolist()))}]"
+    sparse_json = json.dumps({str(k): float(v) for k, v in q_sparse.items()})
+    # Use first token for ColBERT (simplified for now)
+    colbert_vec_str = f"[{','.join(map(str, q_colbert[0].tolist()))}]"
+    
+    conn = get_connection(database_url=database_url)
+    cur = conn.cursor()
+    try:
+        cur.execute(sql, (
+            dense_vec_str, dense_vec_str, dense_vec_str, top_k,  # dense params
+            sparse_json, top_k,  # sparse params  
+            colbert_vec_str, colbert_vec_str, top_k  # colbert params
+        ))
+        
+        all_results = cur.fetchall()
+        
+        dense_results = []
+        sparse_results = []
+        colbert_results = []
+        
+        for chunk_id, chunk_text, score, method, rank in all_results:
+            result = {"chunk_id": chunk_id, "chunk_text": chunk_text, "score": float(score)}
+            
+            if method == "dense":
+                dense_results.append(result)
+            elif method == "sparse":
+                sparse_results.append(result)
+            elif method == "colbert":
+                colbert_results.append(result)
+                
+        return dense_results, sparse_results, colbert_results
+        
+    finally:
+        cur.close()
+        conn.close()
