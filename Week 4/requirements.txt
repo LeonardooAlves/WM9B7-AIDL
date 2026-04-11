@@ -13,9 +13,24 @@ scikit-learn              # For cosine_similarity
 # Database
 psycopg2-binary           # PostgreSQL adapter
 
-
+# LangChain
 langchain
 langchain-groq
 langchain-core
 langchain-text-splitters
 tiktoken
+
+# Web app
+flask
+
+# Reranking
+transformers              # Cross-encoder reranker
+torch                     # Required by transformers
+
+# Benchmarking
+pandas                    # Results analysis
+matplotlib                # Score visualisation
+rouge-score               # ROUGE-L generation metric
+bert-score                # Semantic similarity generation metric
+sentence-transformers     # Required by bert-score
+langchain-community       # HuggingFaceEmbeddings (used by bert-score wrapper)
