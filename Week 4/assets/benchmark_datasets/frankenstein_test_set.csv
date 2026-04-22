@@ -1,0 +1,51 @@
+question,answer,parts,notes
+Who is the author of Frankenstein?,Mary Wollstonecraft Shelley.,Title Page / Opening,Tests basic metadata retrieval.
+To whom are the opening letters addressed?,"Mrs. Saville, England.",Letter 1,Tests character relationship and destination extraction.
+From what city does Robert Walton write his first letter?,St. Petersburgh.,Letter 1,Tests location extraction.
+What is Robert Walton's primary goal in his expedition?,To discover a northern passage to the Pacific or reveal the source of the Earth's magnetism.,Letter 1,Tests motive/goal reasoning.
+What is the name of Victor Frankenstein's closest friend?,Henry Clerval.,Chapter 1 / Chapter 2,Tests character identification.
+What is the name of Victor's adopted sister?,Elizabeth Lavenza.,Chapter 1,Tests minor character relationship.
+In what city was Victor Frankenstein born?,Naples.,Chapter 1,Tests location extraction.
+What natural event sparks Victor's early interest in electricity?,A thunderstorm that shatters an oak tree.,Chapter 2,Tests causal reasoning and event retrieval.
+Who is Victor's mother?,Caroline Beaufort.,Chapter 1,Tests familial relationship extraction.
+From what disease does Victor's mother die?,Scarlet fever.,Chapter 3,Tests medical/plot detail extraction.
+How does Caroline catch scarlet fever?,From nursing Elizabeth back to health.,Chapter 3,Tests causal reasoning.
+What ancient alchemist does Victor read with enthusiasm in his youth?,Cornelius Agrippa.,Chapter 2,Tests historical/literary reference extraction.
+In what city does Victor attend university?,Ingolstadt.,Chapter 3,Tests location detail.
+Which professor encourages Victor's interest in modern chemistry?,M. Waldman.,Chapter 3,Tests character role identification.
+How tall is the creature Victor creates?,About eight feet tall.,Chapter 4,Tests numerical detail extraction.
+What color are the newly awakened creature's eyes?,"Watery, yellowish.",Chapter 5,Tests descriptive detail extraction.
+Who nurses Victor back to health after he falls ill post-creation?,Henry Clerval.,Chapter 5,Tests character action extraction.
+Who is the creature's first murder victim?,William Frankenstein.,Chapter 7,Tests sequence and plot event retrieval.
+Who is falsely accused of murdering William?,Justine Moritz.,Chapter 7,Tests plot detail extraction.
+What piece of evidence is found in Justine's pocket?,A miniature portrait of Caroline (Victor's mother).,Chapter 8,Tests object/item retrieval.
+Why does Justine confess to the murder despite being innocent?,Her confessor threatened her with excommunication and hellfire.,Chapter 8,Tests motivation extraction.
+Where does Victor meet the creature for the first time after its creation?,The summit of Montanvert (or the Mer de Glace).,Chapter 10,Tests setting extraction.
+What name does the creature use to refer to himself in relation to his creator?,"The ""Adam of your labours.""",Chapter 10,Tests metaphor/quote extraction.
+Who is the blind old man in the cottage?,De Lacey.,Chapter 12,Tests minor character identification.
+What country are the cottagers originally from?,France.,Chapter 14,Tests origin/background detail.
+What is the name of Felix's Arabian lover?,Safie.,Chapter 13,Tests character relationship.
+How does the creature learn to speak and read?,By observing the cottagers teaching Safie.,Chapter 13,Tests causal reasoning and action extraction.
+Name one of the three books the creature finds and reads.,"Paradise Lost (or Plutarch's Lives, or The Sorrows of Werter).",Chapter 15,Tests literary reference within the text.
+Why does the creature initially approach the old man De Lacey alone?,Because he is blind and cannot judge the creature by his hideous appearance.,Chapter 15,Tests logical reasoning / motivation.
+What does the creature do to the De Lacey cottage after the family flees?,He sets it on fire.,Chapter 16,Tests sequential action retrieval.
+How is the creature rewarded after rescuing a young girl from drowning?,He is shot by her companion (a rustic).,Chapter 16,Tests irony/event consequence extraction.
+What does the creature demand Victor make for him?,A female companion.,Chapter 16,Tests plot driver extraction.
+Where does Victor go to create the female creature?,The Orkney Islands in Scotland.,Chapter 19,Tests specific location retrieval.
+Why does Victor ultimately destroy the female creature?,"He fears she might be more malignant, they might hate each other, or they might breed a race of devils.",Chapter 20,Tests extraction of philosophical rationale.
+What threat does the creature make to Victor after the female is destroyed?,"""I will be with you on your wedding-night.""",Chapter 20,Tests exact quote/threat extraction.
+Who is murdered in Ireland?,Henry Clerval.,Chapter 21,Tests plot event retrieval.
+Who is the Irish magistrate who treats Victor kindly during his imprisonment?,Mr. Kirwin.,Chapter 21,Tests minor character identification.
+How does Elizabeth die?,The creature strangles her on her wedding night.,Chapter 23,Tests climactic event extraction.
+What happens to Victor's father after Elizabeth's death?,He dies of grief shortly after.,Chapter 23,Tests consequence/sequential action.
+How does Victor pursue the creature at the end of the novel?,By dog sled across the ice.,Chapter 24,Tests method of transport / action extraction.
+What does the creature vow to do at the very end of the novel?,To build a funeral pyre and burn himself at the North Pole.,Chapter 24 (Walton's continuation),Tests concluding event extraction.
+What is the subtitle of the novel Frankenstein?,The Modern Prometheus.,Title Page,Tests title metadata.
+What is the exact date of Walton's first letter?,"Dec. 11th, 17—.",Letter 1,Tests precise date extraction.
+What subject does M. Krempe teach?,Natural philosophy.,Chapter 3,Tests academic detail extraction.
+What instrument does the old man De Lacey play?,A guitar.,Chapter 11 / 12,Tests object extraction.
+Where does Victor go to find peace after Justine's execution?,The valley of Chamounix / Alpine valleys.,Chapter 9,Tests location / setting retrieval.
+What is the name of the merchant who was Safie's father?,A Turkish merchant (he is primarily referred to as the Turk).,Chapter 14,Tests character background.
+Why was Felix exiled from France?,For helping the Turkish merchant escape from prison.,Chapter 14,Tests backstory / motive extraction.
+What does the creature eat when he first discovers fire?,Nuts and roots/berries.,Chapter 11,Tests survival detail extraction.
+"What language do the cottagers speak, which the creature learns?",French.,Chapter 14,Tests language / cultural detail.

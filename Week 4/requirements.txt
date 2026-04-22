@@ -1,0 +1,36 @@
+# LLM APIs
+openai                    # Groq API client
+
+# Configuration
+python-dotenv             # Environment variable loading
+pyyaml                    # YAML config file parsing
+munch                     # Object-style config access
+
+# BGE-M3 Embeddings
+FlagEmbedding             # BGE-M3 model
+scikit-learn              # For cosine_similarity
+
+# Database
+psycopg2-binary           # PostgreSQL adapter
+
+# LangChain
+langchain
+langchain-groq
+langchain-core
+langchain-text-splitters
+tiktoken
+
+# Web app
+flask
+
+# Reranking
+transformers              # Cross-encoder reranker
+torch                     # Required by transformers
+
+# Benchmarking
+pandas                    # Results analysis
+matplotlib                # Score visualisation
+rouge-score               # ROUGE-L generation metric
+bert-score                # Semantic similarity generation metric
+sentence-transformers     # Required by bert-score
+langchain-community       # HuggingFaceEmbeddings (used by bert-score wrapper)

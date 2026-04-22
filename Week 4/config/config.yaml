@@ -1,0 +1,56 @@
+# Groq
+groq:
+  model: llama-3.1-8b-instant
+  temperature: 0.7
+  max_tokens: 100
+  base_url: "https://api.groq.com/openai/v1"
+
+# Supabase
+supabase:
+  host: db.ewcugkjfmcxnwafzhqdf.supabase.co
+  port: 5432
+  database: postgres
+  user: postgres
+
+# Text Chunking
+chunking:
+  book_file: "books/Alice's Adventures in Wonderland by Lewis Carroll.txt"
+  # book_file: "books/Pride and Prejudice by Jane Austen.txt"
+  # book_file: "books/Romeo and Juliet by William Shakespeare.txt"
+  # book_file: "books/Frankenstein; or, the modern prometheus by Mary Wollstonecraft Shelley.txt"
+  fixed_size:
+    chunk_size: 1000
+    overlap: 200
+  sentence:
+    max_sentences: 10
+    overlap_sentences: 2
+  paragraph:
+    min_chars: 80
+  token:
+    chunk_size: 400
+    overlap: 50
+
+# Embedding
+embedding:
+  model: "BAAI/bge-m3"
+  batch_size: 16
+  max_length: 512
+  num_chunks_embed: 75
+
+# Retrieval
+retrieval:
+  top_k: 5
+
+
+# Re-ranking
+reranker:
+  model: "BAAI/bge-reranker-base"
+  # How many candidates to retrieve before re-ranking (multiplied by top_k)
+  candidate_factor: 3
+ 
+# Benchmarking
+benchmarking:
+  # Number of questions sampled per test set — keep small to limit LLM calls
+  sample_size: 10
+  random_seed: 42
+  retrieval_threshold: 0.15   # Min ROUGE-L for a chunk to count as a hit
