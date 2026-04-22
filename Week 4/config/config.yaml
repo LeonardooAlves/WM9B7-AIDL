@@ -6,8 +6,10 @@ groq:
   base_url: "https://api.groq.com/openai/v1"
 
 hugging_face:
-  model: "Qwen/Qwen2.5-7B-Instruct"
+  model: "openai/gpt-oss-20b:groq"
+  # model: "Qwen/Qwen2.5-7B-Instruct"
   # model: "meta-llama/Llama-4-Scout-17B-16E-Instruct"
+  # model: "meta-llama/Llama-3.1-8B-Instruct:cerebras"
   temperature: 0.7
   max_tokens: 512
 
