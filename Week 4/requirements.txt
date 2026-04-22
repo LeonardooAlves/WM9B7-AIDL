@@ -1,5 +1,6 @@
 # LLM APIs
 openai                    # Groq API client
+huggingface_hub           # Hugging Face
 
 # Configuration
 python-dotenv             # Environment variable loading
@@ -16,6 +17,7 @@ psycopg2-binary           # PostgreSQL adapter
 # LangChain
 langchain
 langchain-groq
+langchain-huggingface
 langchain-core
 langchain-text-splitters
 tiktoken

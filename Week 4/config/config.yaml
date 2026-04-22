@@ -5,12 +5,18 @@ groq:
   max_tokens: 100
   base_url: "https://api.groq.com/openai/v1"
 
+hugging_face:
+  model: "Qwen/Qwen2.5-7B-Instruct"
+  # model: "meta-llama/Llama-4-Scout-17B-16E-Instruct"
+  temperature: 0.7
+  max_tokens: 512
+
 # Supabase
 supabase:
-  host: db.ewcugkjfmcxnwafzhqdf.supabase.co
-  port: 5432
+  host: aws-1-eu-west-1.pooler.supabase.com
+  port: 5432                                  
   database: postgres
-  user: postgres
+  user: postgres.ewcugkjfmcxnwafzhqdf
 
 # Text Chunking
 chunking:
