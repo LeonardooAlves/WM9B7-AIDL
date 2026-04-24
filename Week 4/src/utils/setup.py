@@ -56,7 +56,7 @@ def fatal(msg):
 # Week 4 root is:      three levels up
 SCRIPT_DIR = Path(__file__).resolve().parent  # Week 4/src/utils
 WEEK4_DIR = SCRIPT_DIR.parent.parent  # Week 4/
-VENV_DIR = WEEK4_DIR / "venv"
+VENV_DIR = WEEK4_DIR / "venv_rag"
 REQUIREMENTS = WEEK4_DIR / "requirements.txt"
 NOTEBOOKS_DIR = WEEK4_DIR / "src"
 VSCODE_DIR = WEEK4_DIR / ".vscode"
